@@ -159,6 +159,7 @@ services:
     environment:
       EULA: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "true"
+      VERSION: "LATEST"
       INIT_MEMORY: "1G"
       MAX_MEMORY: "2G"
       MAX_PLAYERS: 20
@@ -182,6 +183,7 @@ services:
     environment:
       EULA: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "true"
+      VERSION: "LATEST"
       INIT_MEMORY: "1G"
       MAX_MEMORY: "2G"
       MAX_PLAYERS: 10
