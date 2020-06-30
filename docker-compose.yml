@@ -184,19 +184,13 @@ services:
     environment:
       EULA: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "true"
-      VERSION: "1.7"
+      VERSION: "1.11"
       INIT_MEMORY: "1G"
       MAX_MEMORY: "2G"
-      MAX_PLAYERS: 10
+      MAX_PLAYERS: 20
       SERVER_PORT: 9001
       RCON_PORT: 9002
       MOTD: "Like, what the fuck?"
-      ALLOW_FLIGHT: "true"
-      SPAWN_ANIMALS: "true"
-      PVP: "false"
-      ENABLE_COMMAND_BLOCK: "true"
-      VIEW_DISTANCE: "12"
-      SPAWN_NPCS: "true"
 
   #RCON - Game server management
   rcon:
