@@ -168,6 +168,7 @@ services:
       MOTD: "Sponsored by Ell's obsession with Minecraft."
 
   #Confusion - An absolute kerfuffle of nonsense.
+  #Currrently: Hypixel's "Herobrine's Mansion" Map
   minecraft-conf:
     image: itzg/minecraft-server:20200326
     container_name: minecraft-conf
@@ -190,6 +191,12 @@ services:
       SERVER_PORT: 9001
       RCON_PORT: 9002
       MOTD: "Like, what the fuck?"
+      ALLOW_FLIGHT: "true"
+      SPAWN_ANIMALS: "true"
+      PVP: "false"
+      ENABLE_COMMAND_BLOCK: "true"
+      VIEW_DISTANCE: "12"
+      SPAWN_NPCS: "true"
 
   #RCON - Game server management
   rcon:
