@@ -190,7 +190,7 @@ services:
       MAX_PLAYERS: 20
       SERVER_PORT: 9001
       RCON_PORT: 9002
-      MOTD: "Like, what the fuck?"
+      MOTD: "Huh?"
 
   #RCON - Game server management
   rcon:
