@@ -194,7 +194,7 @@ services:
 
   #RCON - Game server management
   rcon:
-    image: itzg/rcon
+    image: itzg/rcon:20190606
     container_name: rcon
     hostname: rcon
     restart: unless-stopped
