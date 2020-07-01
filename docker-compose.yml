@@ -144,55 +144,53 @@ services:
       traefik.frontend.headers.customFrameOptionsValue: 'allow-from https:${DOMAIN_NAME}'
 
   #Minecraft - It's Minecraft, for FUSION.
-#  minecraft-fus:
-#    image: itzg/minecraft-server:20200326
-#    container_name: minecraft-fus
-#    hostname: minecraft-fus
-#    restart: unless-stopped
-#    networks:
-#      - default
-#    ports:
-#      - "9003:9003"
-#      - "9004:9004"
-#    volumes:
-#      - "/drives/Filaserva/Minecraft/FUSION:/data"
-#    environment:
-#      EULA: "TRUE"
-#      OVERRIDE_SERVER_PROPERTIES: "true"
-#      INIT_MEMORY: "1G"
-#      MAX_MEMORY: "2G"
-#      MAX_PLAYERS: 40
-#      SERVER_PORT: 9003
-#      RCON_PORT: 9004
-#      MOTD: "A FUSION happy fun times experience."
+  minecraft-fus:
+    image: itzg/minecraft-server:20200326
+    container_name: minecraft-fus
+    hostname: minecraft-fus
+    restart: unless-stopped
+    networks:
+      - default
+    ports:
+      - "9003:9003"
+      - "9004:9004"
+    volumes:
+      - "/drives/Filaserva/Minecraft/FUSION:/data"
+    environment:
+      EULA: "TRUE"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      VERSION: "LATEST"
+      INIT_MEMORY: "1G"
+      MAX_MEMORY: "2G"
+      MAX_PLAYERS: 20
+      SERVER_PORT: 9003
+      RCON_PORT: 9004
+      MOTD: "Sponsored by Ell's obsession with Minecraft."
 
-  #Minecraft - FTB Academy.
-#  minecraft-aca:
-#    image: itzg/minecraft-server:20200326
-#    container_name: minecraft-aca
-#    hostname: minecraft-aca
-#    restart: unless-stopped
-#    networks:
-#      - default
-#    ports:
-#      - "9001:9001"
-#      - "9002:9002"
-#    volumes:
-#      - "/drives/Filaserva/Minecraft/Academy:/data"
-#    environment:
-#      EULA: "TRUE"
-#      OPS: "wondercameron"
-#      OVERRIDE_SERVER_PROPERTIES: "true"
-#      ALLOW_FLIGHT: "TRUE"
-#      INIT_MEMORY: "1G"
-#      MAX_MEMORY: "8G"
-#      MAX_PLAYERS: 10
-#      TYPE: "FTB"
-#      FTB_SERVER_MOD: "https://media.forgecdn.net/files/2792/369/FTBAcademyServer_1.1.0.zip"
-#      SERVER_NAME: "Academy"
-#      SERVER_PORT: 9001
-#      RCON_PORT: 9002
-#      MOTD: "kNoWlEdGe Is PoWeR!!!!!!!"
+  #Confusion - An absolute kerfuffle of nonsense.
+  #Currrently: Hypixel's "Herobrine's Mansion" Map
+  minecraft-conf:
+    image: itzg/minecraft-server:20200326
+    container_name: minecraft-conf
+    hostname: minecraft-conf
+    restart: unless-stopped
+    networks:
+      - default
+    ports:
+      - "9001:9001"
+      - "9002:9002"
+    volumes:
+      - "/drives/Filaserva/Minecraft/Confusion:/data"
+    environment:
+      EULA: "TRUE"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      VERSION: "1.11"
+      INIT_MEMORY: "1G"
+      MAX_MEMORY: "2G"
+      MAX_PLAYERS: 20
+      SERVER_PORT: 9001
+      RCON_PORT: 9002
+      MOTD: "Huh?"
 
   #RCON - Game server management
   rcon:
