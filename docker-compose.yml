@@ -168,7 +168,7 @@ services:
       MOTD: "Sponsored by Ell's obsession with Minecraft."
 
   #Confusion - An absolute kerfuffle of nonsense.
-  #Currrently: Hypixel's "Herobrine's Mansion" Map
+  #Currrently: Herobrine's Return
   minecraft-conf:
     image: itzg/minecraft-server:20200326
     container_name: minecraft-conf
@@ -180,17 +180,17 @@ services:
       - "9001:9001"
       - "9002:9002"
     volumes:
-      - "/drives/Filaserva/Minecraft/Confusion:/data"
+      - "/drives/Filaserva/Minecraft/Confusion_Herbrines-Return:/data"
     environment:
       EULA: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "true"
-      VERSION: "1.11"
+      VERSION: "1.7"
       INIT_MEMORY: "1G"
       MAX_MEMORY: "2G"
       MAX_PLAYERS: 20
       SERVER_PORT: 9001
       RCON_PORT: 9002
-      MOTD: "Huh?"
+      MOTD: "Current Map: Herobrine's Return"
 
   #RCON - Game server management
   rcon:
