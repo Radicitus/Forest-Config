@@ -168,7 +168,7 @@ services:
       MOTD: "Sponsored by Ell's obsession with Minecraft."
 
   #Confusion - An absolute kerfuffle of nonsense.
-  #Currrently: Herobrine's Return
+  #Currrently: Castle to None
   minecraft-conf:
     image: itzg/minecraft-server:20200326
     container_name: minecraft-conf
