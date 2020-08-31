@@ -168,7 +168,7 @@ services:
       MOTD: "Sponsored by Ell's obsession with Minecraft."
 
   #Confusion - An absolute kerfuffle of nonsense.
-  #Currrently: Castle to None
+  #Currrently: Witchcraft and Wizardry
   minecraft-conf:
     image: itzg/minecraft-server:20200326
     container_name: minecraft-conf
@@ -180,17 +180,17 @@ services:
       - "9001:9001"
       - "9002:9002"
     volumes:
-      - "/drives/Filaserva/Minecraft/Confusion_Castle-To-None:/data"
+      - "/drives/Filaserva/Minecraft/Confusion_Witchcraft-and-Wizardry_[Clameron]:/data"
     environment:
       EULA: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "true"
-      VERSION: "1.14.4"
+      VERSION: "1.13.2"
       INIT_MEMORY: "1G"
-      MAX_MEMORY: "2G"
-      MAX_PLAYERS: 5
+      MAX_MEMORY: "4G"
+      MAX_PLAYERS: 4
       SERVER_PORT: 9001
       RCON_PORT: 9002
-      MOTD: "Current Map: Castle to None"
+      MOTD: "Current Map: Witchcraft and Wizardry"
 
   #RCON - Game server management
   rcon:
