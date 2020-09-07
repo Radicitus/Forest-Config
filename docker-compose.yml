@@ -190,6 +190,7 @@ services:
       INIT_MEMORY: "1G"
       MAX_MEMORY: "8G"
       MAX_PLAYERS: 4
+      TYPE: "FTB"
       FTB_SERVER_MOD: "https://media.forgecdn.net/files/2792/369/FTBAcademyServer_1.1.0.zip"
       SERVER_NAME: "FTB Academy"
       SERVER_PORT: 9001
