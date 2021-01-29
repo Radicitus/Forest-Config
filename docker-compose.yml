@@ -143,73 +143,6 @@ services:
       traefik.frontend.headers.customResponseHeaders: X-Robots-Tag:noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex
       traefik.frontend.headers.customFrameOptionsValue: 'allow-from https:${DOMAIN_NAME}'
 
-  #Minecraft - It's Minecraft, for FUSION.
-  minecraft-fus:
-    image: itzg/minecraft-server:20200326
-    container_name: minecraft-fus
-    hostname: minecraft-fus
-    restart: unless-stopped
-    networks:
-      - default
-    ports:
-      - "9003:9003"
-      - "9004:9004"
-    volumes:
-      - "/drives/Filaserva/Minecraft/FUSION:/data"
-    environment:
-      EULA: "TRUE"
-      OVERRIDE_SERVER_PROPERTIES: "true"
-      VERSION: "1.16.1"
-      INIT_MEMORY: "1G"
-      MAX_MEMORY: "2G"
-      MAX_PLAYERS: 20
-      SERVER_PORT: 9003
-      RCON_PORT: 9004
-      MOTD: "Sponsored by Ell's obsession with Minecraft."
-
-  #Confusion - An absolute kerfuffle of nonsense.
-  #Currrently: FTB Academy
-  minecraft-conf:
-    image: itzg/minecraft-server:20200326
-    container_name: minecraft-conf
-    hostname: minecraft-conf
-    restart: unless-stopped
-    networks:
-      - default
-    ports:
-      - "9001:9001"
-      - "9002:9002"
-    volumes:
-      - "/drives/Filaserva/Minecraft/Confusion_FTB-Academy:/data"
-    environment:
-      EULA: "TRUE"
-      OPS: "wondercameron"
-      OVERRIDE_SERVER_PROPERTIES: "true"
-      ALLOW_FLIGHT: "TRUE"
-      VERSION: "1.12.2"
-      INIT_MEMORY: "1G"
-      MAX_MEMORY: "8G"
-      MAX_PLAYERS: 4
-      FTB_SERVER_MOD: "https://media.forgecdn.net/files/2792/369/FTBAcademyServer_1.1.0.zip"
-      SERVER_NAME: "FTB Academy"
-      SERVER_PORT: 9001
-      RCON_PORT: 9002
-      MOTD: "Current Map: FTB Academy"
-
-  #RCON - Game server management
-  rcon:
-    image: itzg/rcon:20190606
-    container_name: rcon
-    hostname: rcon
-    restart: unless-stopped
-    networks:
-      - default
-    ports:
-      - "4326:4326"
-      - "4327:4327"
-    volumes:
-      - "${USERDIR}/docker/rcon:/opt/rcon-web-admin/db"
-
 ##Utilities############################
 
   #PHPMyAdmin - WebUI for Managing MariaDB
@@ -612,7 +545,7 @@ services:
 
   #Radarr - Movie Management
   radarr:
-    image: linuxserver/radarr:preview
+    image: linuxserver/radarr
     container_name: radarr
     hostname: radarr
     restart: unless-stopped
@@ -653,7 +586,7 @@ services:
   
   #Sonarr - TV Shows Management
   sonarr:
-    image: linuxserver/sonarr:preview
+    image: linuxserver/sonarr
     container_name: sonarr
     hostname: sonarr
     restart: unless-stopped
