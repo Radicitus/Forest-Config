@@ -669,7 +669,7 @@ services:
 
   #Ombi - Media Requests
   ombi:
-    image: linuxserver/ombi
+    image: linuxserver/ombi:development
     container_name: ombi
     hostname: ombi
     restart: unless-stopped
