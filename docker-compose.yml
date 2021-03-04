@@ -586,7 +586,7 @@ services:
   
   #Sonarr - TV Shows Management
   sonarr:
-    image: linuxserver/sonarr
+    image: linuxserver/sonarr:preview
     container_name: sonarr
     hostname: sonarr
     restart: unless-stopped
